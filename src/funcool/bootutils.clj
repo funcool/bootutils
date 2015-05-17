@@ -1,4 +1,4 @@
-(ns bootutils.core
+(ns funcool.bootutils
   {:boot/export-tasks true}
   (:require [boot.core :refer :all]
             [boot.task.built-in :refer :all]))
@@ -24,8 +24,7 @@
         (push :file file
               :ensure-snapshot true
               :repo "deploy-clojars"
-              :ensure-clean false
-              :ensure-branch "master")))
+              :ensure-clean false)))
 
 (deftask push-release
   "Deploy snapshot version to Clojars."
@@ -33,9 +32,7 @@
   (comp (clojars-credentials)
         (push :file file
               :ensure-release true
-              :repo "deploy-clojars"
-              :ensure-clean true
-              :ensure-branch "master")))
+              :ensure-clean false)))
 
 (deftask build-jar []
   (comp (pom)
@@ -48,4 +45,3 @@
 (deftask deploy-release []
   (comp (build-jar)
         (push-release)))
-

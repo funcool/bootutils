@@ -3,7 +3,7 @@
  :dependencies '[[boot/core "2.0.0-rc14" :scope "provided"]
                  [org.clojure/clojure "1.7.0-beta3" :scope "provided"]])
 
-(require '[bootutils.core :refer :all])
+(require '[funcool.bootutils :refer :all])
 
 (def +version+ "0.1.0-SNAPSHOT")
 
