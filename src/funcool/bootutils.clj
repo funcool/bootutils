@@ -32,6 +32,7 @@
   (comp (clojars-credentials)
         (push :file file
               :ensure-release true
+              :repo "deploy-clojars"
               :ensure-clean false)))
 
 (deftask build-jar []

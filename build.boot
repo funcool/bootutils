@@ -5,7 +5,7 @@
 
 (require '[funcool.bootutils :refer :all])
 
-(def +version+ "0.1.0-SNAPSHOT")
+(def +version+ "0.1.0")
 
 (task-options!
  pom  {:project     'funcool/bootutils

@@ -1,13 +1,18 @@
 # bootutils #
 
+```clojure
+[funcool/bootutils "0.1.0"]
+```
+
 A collection of tasks for deploy artifacts to clojars.
+
 
 ## Usage
 
 Add `bootutils` to your `build.boot` dependencies and `require` the namespace:
 
 ```clj
-(set-env! :dependencies '[[funcool/bootutils "X.Y.Z" :scope "test"]])
+(set-env! :dependencies '[[funcool/bootutils "0.1.0" :scope "test"]])
 (require '[funcool.bootutils :refer :all])
 
 (def +version+ "0.1.0-SNAPSHOT")
